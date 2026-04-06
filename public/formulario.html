@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <div class="container">
+        <button class="btn-volver" onclick="history.back()">&#8592; Volver</button>
+
+        <div class="form-title">Formulario</div>
+
+        <form id="formulario">
+            <div id="formularioContainer"></div>
+
+            <div id="error-message" class="error-message" style="display: none;"></div>
+
+            <div class="form-footer">
+                <button type="button" id="btnGenerar" class="btn-generar">Generar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="utils.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>
