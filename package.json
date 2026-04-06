@@ -12,6 +12,7 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "jszip": "^3.10.1",
     "pdf-lib": "^1.17.1",
