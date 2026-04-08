@@ -1,0 +1,16 @@
+{
+    "nombreFormulario": "Opcion Menor 14",
+    "camposFormulario": {
+        "hora": "<HORA>",
+        "fechaActa": "<FECHAACTA>",
+        "nombrePadreMadreEspañol": "<NOMB.M/P-ESP>",
+        "lugarNacimientoInteresado": "<LUGAR-NAC-INT>",
+        "fechaNacimientoPadreMadreEspañol": "<FECHA-NAC-M/P-ESP>",
+        "domicilioInteresado": "<DOMIC.INT>",
+        "nombreInteresado": "<INTERESADO/A>",
+        "fechaNacimientoInteresado": "<FECHA NAC, INT>",
+        "dniInteresado": "<NRO-DNI>",
+        "nombreInteresadoRepresentado": "<NOMB.INT>",
+        "nombrePadreMadre": "<NOMB.M/P>"
+    }
+}
