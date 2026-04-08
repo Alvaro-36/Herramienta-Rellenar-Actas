@@ -47,18 +47,21 @@ function reemplazarEnXml(xmlString, palabraClave, palabraReemplazo) {
 
     let cantidadReemplazos = 0;
 
-    const parrafos = doc.getElementsByTagNameNS(ns, "p");
+    let parrafos = doc.getElementsByTagName("w:p");
+    if (parrafos.length === 0) parrafos = doc.getElementsByTagNameNS(ns, "p");
 
     for (let i = 0; i < parrafos.length; i++) {
         const parrafo = parrafos[i];
-        const runs = parrafo.getElementsByTagNameNS(ns, "r");
+        let runs = parrafo.getElementsByTagName("w:r");
+        if (runs.length === 0) runs = parrafo.getElementsByTagNameNS(ns, "r");
 
         const nodosTexto = [];
         let textoCompleto = "";
 
         for (let j = 0; j < runs.length; j++) {
             const run = runs[j];
-            const tElements = run.getElementsByTagNameNS(ns, "t");
+            let tElements = run.getElementsByTagName("w:t");
+            if (tElements.length === 0) tElements = run.getElementsByTagNameNS(ns, "t");
             for (let k = 0; k < tElements.length; k++) {
                 const tElem = tElements[k];
                 const texto = tElem.textContent;
