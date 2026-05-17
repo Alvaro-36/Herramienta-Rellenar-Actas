@@ -70,11 +70,12 @@ function toCamelCase(str) {
         'consul': 'consulado'
     };
 
-    // Normalize accents and convert to lower case
+    // Normalize accents and convert to lower case, but preserve ñ
     let cleaned = str
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, ""); // Remove accents
+        .replace(/[\u0300-\u0302\u0304-\u036f]/g, "") // Remove accents except tilde (ñ)
+        .normalize("NFC");
 
     // Apply dictionary translations for abbreviations
     Object.entries(dictionary).forEach(([abbr, full]) => {
