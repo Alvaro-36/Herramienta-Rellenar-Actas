@@ -42,6 +42,13 @@ body {
     margin-bottom: 30px;
 }
 
+.fields-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
 .field-group {
     display: flex;
     flex-direction: column;
@@ -54,7 +61,8 @@ body {
     color: #334155;
 }
 
-.field-group input[type="text"] {
+.field-group input[type="text"],
+.field-group select {
     width: 100%;
     height: 42px;
     padding: 0 14px;
@@ -67,7 +75,8 @@ body {
     transition: all 0.2s ease;
 }
 
-.field-group input[type="text"]:focus {
+.field-group input[type="text"]:focus,
+.field-group select:focus {
     border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
     background-color: #ffffff;

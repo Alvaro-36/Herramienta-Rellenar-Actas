@@ -40,10 +40,20 @@ function generarFormulario(formulario) {
             defaultValue = "COMUN";
         }
 
+        let inputHTML = `<input type="text" id="${campo}" name="${campo}" placeholder="" value="${defaultValue}" required>`;
+        if (campo === "pMadre") {
+            inputHTML = `
+                <select id="${campo}" name="${campo}" required>
+                    <option value="P" ${defaultValue === "P" ? "selected" : ""}>P (Padre)</option>
+                    <option value="M" ${defaultValue === "M" ? "selected" : ""}>M (Madre)</option>
+                </select>
+            `;
+        }
+
         return `
             <div class="field-group">
                 <label for="${campo}">${campo[0].toUpperCase() + campo.slice(1)}</label>
-                <input type="text" id="${campo}" name="${campo}" placeholder="" value="${defaultValue}" required>
+                ${inputHTML}
             </div>
         `;
     }).join('');
