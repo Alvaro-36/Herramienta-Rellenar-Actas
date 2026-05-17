@@ -1,0 +1,14 @@
+{
+    "nombreFormulario": "Acta recuperacion",
+    "camposFormulario": {
+        "horaActual": "<HORA-ACTUAL>",
+        "diaActual": "<DIA-ACTUAL>",
+        "nombreInteresado": "<NOMBRE-INTERESADO>",
+        "nacionalidadInteresado": "<NACIONALIDAD-INTERESADO>",
+        "ciudadDomicilioInteresado": "<CIUDAD-DOMICILIO-INTERESADO>",
+        "vecindadCivil": "<VECINADAD-CIVIL>",
+        "tomo": "<TOMO>",
+        "pagina": "<PAGINA>",
+        "numero": "<NUMERO>"
+    }
+}

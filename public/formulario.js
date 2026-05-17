@@ -19,12 +19,32 @@ function generarFormulario(formulario) {
     const container = document.getElementById("formularioContainer");
     const campos = Object.entries(formulario.camposFormulario);
 
-    const camposHTML = campos.map(([campo, placeholder]) => `
-        <div class="field-group">
-            <label for="${campo}">${campo[0].toUpperCase() + campo.slice(1)}</label>
-            <input type="text" id="${campo}" name="${campo}" placeholder="" required>
-        </div>
-    `).join('');
+    const camposHTML = campos.map(([campo, placeholder]) => {
+        let defaultValue = "";
+        const now = new Date();
+
+        if (campo === "horaActual") {
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            defaultValue = `${hours}:${minutes}`;
+        } else if (campo === "fechaActual") {
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            defaultValue = `${day}.${month}.${year}`;
+        } else if (campo === "nacionalidadInteresado") {
+            defaultValue = "ARGENTINA";
+        } else if (campo === "ciudadDomicilioInteresado") {
+            defaultValue = "Mendoza";
+        }
+
+        return `
+            <div class="field-group">
+                <label for="${campo}">${campo[0].toUpperCase() + campo.slice(1)}</label>
+                <input type="text" id="${campo}" name="${campo}" placeholder="" value="${defaultValue}" required>
+            </div>
+        `;
+    }).join('');
 
     container.innerHTML = `
         <div class="fields-grid">
