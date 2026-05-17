@@ -32,10 +32,12 @@ function generarFormulario(formulario) {
             const month = String(now.getMonth() + 1).padStart(2, '0');
             const year = now.getFullYear();
             defaultValue = `${day}.${month}.${year}`;
-        } else if (campo === "nacionalidadInteresado") {
+        } else if (campo === "nacionalidadInteresado" || campo === "paisInteresado") {
             defaultValue = "ARGENTINA";
-        } else if (campo === "ciudadDomicilioInteresado") {
+        } else if (campo === "ciudadDomicilioInteresado" || campo === "provinciaConsulado") {
             defaultValue = "Mendoza";
+        } else if (campo === "vecindadCivil") {
+            defaultValue = "COMUN";
         }
 
         return `
@@ -47,7 +49,7 @@ function generarFormulario(formulario) {
     }).join('');
 
     container.innerHTML = `
-        <div class="fields-grid">
+        <div class="fields-list">
             ${camposHTML}
         </div>
     `;

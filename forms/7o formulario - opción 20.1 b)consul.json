@@ -1,0 +1,21 @@
+{
+    "nombreFormulario": "7o Formulario - Opción 20.1 b)CONSUL",
+    "camposFormulario": {
+        "horaActual": "<HORA-ACTUAL>",
+        "diaActual": "<DIA-ACTUAL>",
+        "nombreInteresado": "<NOMBRE-INTERESADO>",
+        "nacionalidadInteresado": "<NACIONALIDAD-INTERESADO>",
+        "ciudadNacimientoInteresado": "<CIUDAD-NACIMIENTO-INTERESADO>",
+        "paisInteresado": "<PAIS-INTERESADO>",
+        "diaNacimientoInteresado": "<DIA-NACIMIENTO-INTERESADO>",
+        "mesNacimientoInteresado": "<MES-NACIMIENTO-INTERESADO >",
+        "anoNacimientoInteresado": "<AÑO-NACIMIENTO-INTERESADO>",
+        "padreInteresado": "<PADRE-INTERESADO>",
+        "madreInteresado": "<MADRE-INTERESADO>",
+        "pMadre": "<P/MADRE>",
+        "nacionalidadPadre": "<NACIONALIDAD-PADRE>",
+        "lugarNacimientoPadre": "<LUGAR-NACIMIENTO-PADRE>",
+        "provinciaConsulado": "<PROVINCIA-CONSULADO>",
+        "vecindadCivil": "<VECINDAD-CIVIL>"
+    }
+}
