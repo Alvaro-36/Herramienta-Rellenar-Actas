@@ -1,8 +1,0 @@
-{
-    "nombreFormulario": "Formulario 1",
-    "camposFormulario":{
-        "nombre": "<NOMBRE>",
-        "apellidos": "<APELLIDOS>",
-        "mail": "<MAIL>"
-    }
-}
